@@ -1,0 +1,242 @@
+@import reset
+@import vars
+
+body
+	margin: 0
+	pading: 0
+	//overflow: hidden
+	background: #fff
+
+h1,h2,p,a
+	font:
+		family: $brandFont
+
+a
+	text-decoration: none
+	color: $brandColor
+
+h1
+	font:
+		size: 50px
+		weight: 700
+
+p
+	font:
+		size: 15px
+		weight: 400
+		letter-spacing: 1px
+
+.login-overlay
+	width: 100vw
+	height: 100vh
+	background: #ddd
+	position: fixed
+	z-index: 10
+	text-align: center
+	color: $brandColor
+
+	.form-box
+		background: #fff
+		padding: 
+			bottom: 20px
+			left: 40px
+			right: 40px
+		max-width: 400px
+		margin: 0 auto
+		box-shadow: 0px 2px 2px rgba(0,0,0,.1)
+		box-sizing: border-box
+		border-radius: 2px
+		overflow: hidden
+		position: relative
+		top: 50%
+		transform: translateY(-50%)
+
+		h2
+			color: #fff
+			background: $brandColor
+			width: 100%
+			padding: 10px
+			margin-bottom: 50px
+			box-sizing: border-box
+			letter-spacing: 1px
+
+		form
+			margin: 0 auto
+			display: block
+
+			input
+				width: 100%
+				height: 30px
+				margin-bottom: 20px
+				border-radius: 2px
+				box-shadow: none
+				border: 1px solid #ddd
+				padding: 5px
+				box-sizing: border-box
+
+			.log-in-button
+				background: $brandColor
+				padding: 10px
+				cursor: pointer
+				transition: background .3s ease-in-out
+				color: #fff
+				font-size: 15px
+				border: none
+				width: 100%
+
+				&:hover
+					background: lighten($brandColor, 5%)
+
+.top-bar
+	position: fixed
+	right: 0
+	padding: 10px
+	z-index: 6
+
+	a
+		transition: opacity .3s ease-in-out
+
+		&:hover
+			opacity: .7
+
+
+	p
+		background: #fff
+		padding: 10px 15px
+		border: 1px solid darken(#ddd, 10%)
+		border-radius: 5px
+		position: absolute
+		top: 20px
+		right: 20px
+		width: 70px
+		text-align: center
+		opacity: 0
+		transition: all .3s ease-in-out
+		color: darken(#acacac, 20%)
+
+	p.visible
+		opacity: 1
+		transform: translateY(60%)
+		box-shadow: 0px 2px 5px rgba(0,0,0,.1)
+
+header
+	position: fixed
+	left: 0
+	height: 100vh
+	max-width: 100px
+	background: $brandColor
+	display: flex
+	flex-wrap: wrap
+	flex-direction: column
+	justify-content: space-between
+	box-sizing: padding-box
+	z-index: 6
+	box-shadow: 2px 0px 2px rgba(0,0,0,.1)
+
+	a
+		display: block
+		padding:
+			top: 5px
+			bottom: 8px
+		transition: background .3s ease-in-out
+		margin:
+			top: 20px
+			bottom: 20px
+
+		&:hover
+			background: darken($brandColor, 5%)
+
+	.main-func, .misc-func
+		box-sizing: border-box
+
+		.people-button, .building-button, .settings-button, .home-button
+			margin:
+				top: 10px
+			color: #fff
+			text-align: center
+			position: relative
+			box-sizing: border-box
+
+			.icon
+				position: relative
+
+			.indicator
+				position: absolute
+				top: 50%
+				right: -15px
+				transform: translateY(-50%)
+				background:
+					image: url(../img/indicator.png)
+					repeat: no-repeat
+					position: center
+					size: 50%
+				width: 0px
+				height: 47px
+				transition: all .3s ease-in-out
+
+			.indicator.active
+				width: 41px
+
+			img
+				margin-bottom: 5px
+
+
+.content
+	height: 100vh
+	background: #cddee3
+	overflow: hidden
+	text-align: center
+	position: absolute
+	top: 50%
+	z-index: 4
+	transform: translateY(-50%)
+	right: 0
+
+	div
+		height: 100vh
+		width: 100vw
+		padding: 80px
+		box-sizing: border-box
+
+	#home
+		h1
+			text-align: left
+			font:
+				weight: 300
+			color: $brandColor
+
+		.tasks-row
+			display: flex
+			flex-wrap: wrap
+			height: auto
+			max-height: 300px
+			width: 100%
+			margin: 0 auto
+
+			a
+				height: auto
+
+			.task
+				margin: 10px
+				max-width: 300px
+				min-height: 100%
+				height: auto
+				padding: 20px
+				background: #fff
+				border-radius: 2px
+				box-shadow: 0px 2px 2px rgba(0,0,0,.1)
+				transition: all .3s ease-in-out
+
+				&:hover
+					transform: translateY(-5%)
+					box-shadow: 0px 3px 10px rgba(0,0,0,.1)
+
+				.feedback-svg, .people-task-icon, .building-svg
+					fill: $brandColor
+					max-width: 300px
+
+				.new-order-icon
+					stroke: $brandColor
+					fill: #fff
+					max-width: 300px
+

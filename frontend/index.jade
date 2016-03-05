@@ -1,0 +1,91 @@
+doctype html
+
+html
+
+head
+	meta(charset="utf-8")
+	meta(name="viewport", content="width=device-width, initial-scale=1.0")
+	title SMARTLOCK&reg; Dashboard
+	link(rel="stylesheet", href="css/main.css")
+	script(type="text/javascript", src="script/jquery.min.js")
+	script(type="text/javascript", src="script/script.js")
+
+body
+	.login-overlay
+
+		.form-box
+			h2 Powered by SMARTLOCK®
+
+			form
+				input(type="text", name="username", placeholder="Username")
+				input(type="password", name="password", placeholder="Password")
+
+				//.log-in-button
+					p Log in
+
+				a(href="#home"): button(name="submit", value="submit").log-in-button
+					p Log in
+
+	.top-bar
+		a(href="index.html")
+			img(src="img/door.png", alt="Log out")
+		p Log out
+
+		//a(href="#service")
+			img(src="img/service.png", alt="Service")
+
+	header
+		.main-func
+			a(href="")
+				.home-button
+					icon
+						img(src="img/home.png", alt="Dashboard")
+						.indicator.active
+					p Home
+
+			a(href="#people")
+				.people-button
+					.icon
+						img(src="img/people.png", alt="Manage people")
+						.indicator
+					p People
+
+			a(href="#locations")
+				.building-button
+					.icon
+						img(src="img/building.png", alt="Manage locations")
+						.indicator
+					p Locations
+
+		.misc-func
+			a(href="#settings")
+				.settings-button
+					img(src="img/cog-wheel.png", alt="Edit settings")
+					.indicator
+
+	.content
+		#home
+			h1 Welcome. What would you like to do today?
+
+			.tasks-row
+				a(href="#people"): .task.people
+					include img/people.svg
+					h2 Manage people's permissions and cards
+				a(href="#locations"): .task.building
+					include img/building.svg
+					h2 Manage locations and facilities
+				a(href="shop.html"): .task.new-order
+					include img/bankcard.svg
+					h2 Order new cards
+				a(href="help.html"): .task.feedback
+					include img/feedback.svg
+					h2 Give us some feedback!
+
+		#people
+			h1 People
+
+		#locations
+			h1 LOCATIONS SCREEN
+
+		#settings
+			h1 SETTINGS SCREEN

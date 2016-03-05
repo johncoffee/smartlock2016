@@ -1,0 +1,313 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain) */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  margin: 0;
+  pading: 0;
+  background: #fff;
+}
+
+h1, h2, p, a {
+  font-family: "acumin pro semi condensed", helvetica neue, roboto, arial, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #1c8bad;
+}
+
+h1 {
+  font-size: 50px;
+  font-weight: 700;
+}
+
+p {
+  font-size: 15px;
+  font-weight: 400;
+  font-letter-spacing: 1px;
+}
+
+.login-overlay {
+  width: 100vw;
+  height: 100vh;
+  background: #ddd;
+  position: fixed;
+  z-index: 10;
+  text-align: center;
+  color: #1c8bad;
+}
+
+.login-overlay .form-box {
+  background: #fff;
+  padding-bottom: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
+  max-width: 400px;
+  margin: 0 auto;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  border-radius: 2px;
+  overflow: hidden;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.login-overlay .form-box h2 {
+  color: #fff;
+  background: #1c8bad;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 50px;
+  box-sizing: border-box;
+  letter-spacing: 1px;
+}
+
+.login-overlay .form-box form {
+  margin: 0 auto;
+  display: block;
+}
+
+.login-overlay .form-box form input {
+  width: 100%;
+  height: 30px;
+  margin-bottom: 20px;
+  border-radius: 2px;
+  box-shadow: none;
+  border: 1px solid #ddd;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+.login-overlay .form-box form .log-in-button {
+  background: #1c8bad;
+  padding: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+  color: #fff;
+  font-size: 15px;
+  border: none;
+  width: 100%;
+}
+
+.login-overlay .form-box form .log-in-button:hover {
+  background: #209dc3;
+}
+
+.top-bar {
+  position: fixed;
+  right: 0;
+  padding: 10px;
+  z-index: 6;
+}
+
+.top-bar a {
+  transition: opacity 0.3s ease-in-out;
+}
+
+.top-bar a:hover {
+  opacity: .7;
+}
+
+.top-bar p {
+  background: #fff;
+  padding: 10px 15px;
+  border: 1px solid #c4c4c4;
+  border-radius: 5px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 70px;
+  text-align: center;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+  color: #797979;
+}
+
+.top-bar p.visible {
+  opacity: 1;
+  transform: translateY(60%);
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header {
+  position: fixed;
+  left: 0;
+  height: 100vh;
+  max-width: 100px;
+  background: #1c8bad;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: padding-box;
+  z-index: 6;
+  box-shadow: 2px 0px 2px rgba(0, 0, 0, 0.1);
+}
+
+header a {
+  display: block;
+  padding-top: 5px;
+  padding-bottom: 8px;
+  transition: background 0.3s ease-in-out;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+header a:hover {
+  background: #187997;
+}
+
+header .main-func, header .misc-func {
+  box-sizing: border-box;
+}
+
+header .main-func .people-button, header .main-func .building-button, header .main-func .settings-button, header .main-func .home-button, header .misc-func .people-button, header .misc-func .building-button, header .misc-func .settings-button, header .misc-func .home-button {
+  margin-top: 10px;
+  color: #fff;
+  text-align: center;
+  position: relative;
+  box-sizing: border-box;
+}
+
+header .main-func .people-button .icon, header .main-func .building-button .icon, header .main-func .settings-button .icon, header .main-func .home-button .icon, header .misc-func .people-button .icon, header .misc-func .building-button .icon, header .misc-func .settings-button .icon, header .misc-func .home-button .icon {
+  position: relative;
+}
+
+header .main-func .people-button .indicator, header .main-func .building-button .indicator, header .main-func .settings-button .indicator, header .main-func .home-button .indicator, header .misc-func .people-button .indicator, header .misc-func .building-button .indicator, header .misc-func .settings-button .indicator, header .misc-func .home-button .indicator {
+  position: absolute;
+  top: 50%;
+  right: -15px;
+  transform: translateY(-50%);
+  background-image: url(../img/indicator.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 50%;
+  width: 0px;
+  height: 47px;
+  transition: all 0.3s ease-in-out;
+}
+
+header .main-func .people-button .indicator.active, header .main-func .building-button .indicator.active, header .main-func .settings-button .indicator.active, header .main-func .home-button .indicator.active, header .misc-func .people-button .indicator.active, header .misc-func .building-button .indicator.active, header .misc-func .settings-button .indicator.active, header .misc-func .home-button .indicator.active {
+  width: 41px;
+}
+
+header .main-func .people-button img, header .main-func .building-button img, header .main-func .settings-button img, header .main-func .home-button img, header .misc-func .people-button img, header .misc-func .building-button img, header .misc-func .settings-button img, header .misc-func .home-button img {
+  margin-bottom: 5px;
+}
+
+.content {
+  height: 100vh;
+  background: #cddee3;
+  overflow: hidden;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  z-index: 4;
+  transform: translateY(-50%);
+  right: 0;
+}
+
+.content div {
+  height: 100vh;
+  width: 100vw;
+  padding: 80px;
+  box-sizing: border-box;
+}
+
+.content #home h1 {
+  text-align: left;
+  font-weight: 300;
+  color: #1c8bad;
+}
+
+.content #home .tasks-row {
+  display: flex;
+  flex-wrap: wrap;
+  height: auto;
+  max-height: 300px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.content #home .tasks-row a {
+  height: auto;
+}
+
+.content #home .tasks-row .task {
+  margin: 10px;
+  max-width: 300px;
+  min-height: 100%;
+  height: auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 2px;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.content #home .tasks-row .task:hover {
+  transform: translateY(-5%);
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.content #home .tasks-row .task .feedback-svg, .content #home .tasks-row .task .people-task-icon, .content #home .tasks-row .task .building-svg {
+  fill: #1c8bad;
+  max-width: 300px;
+}
+
+.content #home .tasks-row .task .new-order-icon {
+  stroke: #1c8bad;
+  fill: #fff;
+  max-width: 300px;
+}
